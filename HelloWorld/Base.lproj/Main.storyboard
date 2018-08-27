@@ -1,24 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oxa-bp-fdk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Introduction View Controller-->
+        <scene sceneID="G2H-Bu-N1f">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="Oxa-bp-fdk" customClass="IntroductionViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KK5-IZ-f9V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5v-AC-cnU">
+                                <rect key="frame" x="149" y="40" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S51-Gd-nCW">
+                                <rect key="frame" x="169.5" y="71" width="35" height="30"/>
+                                <state key="normal" title="Hello"/>
+                                <connections>
+                                    <action selector="helloButtonTouchDown:" destination="Oxa-bp-fdk" eventType="touchDown" id="hae-dk-iUY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHD-xT-zEG">
+                                <rect key="frame" x="169" y="111" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonTouchDown:" destination="Oxa-bp-fdk" eventType="touchDown" id="ZWu-d9-Y6u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OHD-xT-zEG" firstAttribute="top" secondItem="S51-Gd-nCW" secondAttribute="bottom" constant="10" id="7yf-sd-cOQ"/>
+                            <constraint firstItem="S51-Gd-nCW" firstAttribute="centerX" secondItem="C3i-B6-jU2" secondAttribute="centerX" id="Qm3-eT-hFd"/>
+                            <constraint firstItem="S51-Gd-nCW" firstAttribute="top" secondItem="y5v-AC-cnU" secondAttribute="bottom" constant="10" id="RL8-Rj-T8e"/>
+                            <constraint firstItem="y5v-AC-cnU" firstAttribute="centerX" secondItem="C3i-B6-jU2" secondAttribute="centerX" id="Z6u-9U-INo"/>
+                            <constraint firstItem="y5v-AC-cnU" firstAttribute="top" secondItem="C3i-B6-jU2" secondAttribute="top" constant="20" id="acM-mj-QW6"/>
+                            <constraint firstItem="OHD-xT-zEG" firstAttribute="centerX" secondItem="C3i-B6-jU2" secondAttribute="centerX" id="hF4-J7-W60"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C3i-B6-jU2"/>
                     </view>
+                    <connections>
+                        <outlet property="introductionLabel" destination="y5v-AC-cnU" id="9Yo-a3-qKG"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gK4-FM-Pe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-124" y="-73"/>
         </scene>
     </scenes>
 </document>
